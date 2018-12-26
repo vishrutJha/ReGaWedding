@@ -166,6 +166,7 @@ h1, h2, h3, h4, h5, h6, figure {
       .fh5co-nav ul li.active > a {
         color: #fff !important; }
 
+#fh5co-header,
 #fh5co-counter,
 #fh5co-event,
 .fh5co-bg {
@@ -290,7 +291,7 @@ h1, h2, h3, h4, h5, h6, figure {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); }
+    background: rgba(0, 0, 0, 0.84); }
   @media screen and (max-width: 768px) {
     #fh5co-counter,
     #fh5co-event {
@@ -1391,3 +1392,11 @@ form label {
 
 .js .animate-box {
   opacity: 0; }
+
+.resort_name {
+  font-family: "Sacramento", Arial, serif;
+  color: white;
+  font-size: 56px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 4.5px; }

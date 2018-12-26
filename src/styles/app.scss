@@ -304,15 +304,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 }
-// #fh5co-header,
-// #fh5co-counter,
-// #fh5co-event,
-// .fh5co-bg {
-// 	background-size: cover;
-// 	background-position: top center;
-// 	background-repeat: no-repeat;
-// 	position: relative;
-// }
+#fh5co-header,
 #fh5co-counter,
 #fh5co-event,
 .fh5co-bg {
@@ -321,6 +313,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	background-repeat: no-repeat;
 	position: relative;
 }
+
 .fh5co-bg {
 	background-position: center center;
 	width: 100%;
@@ -460,7 +453,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, .4);
+		background: rgba(0, 0, 0, .84);
 	}
 	@media screen and (max-width: $screen-sm) {
 		height: inherit;
@@ -1808,3 +1801,11 @@ form {
 		opacity: 0;
 	}
 }
+
+.resort_name {
+	font-family: "Sacramento", Arial, serif;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 4.5px;
+}  
