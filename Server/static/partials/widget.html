@@ -1,0 +1,29 @@
+
+<div ng-if="widgetData.id" class="widget--inner">
+  <div widget-id="{{widgetData.id}}" ng-click="goToDetail()" mr-go-detail="flags.isShowDetail" class="widget--front">
+    <div class="widget--container">
+      <div class="widget--hdr">
+        <h2 class="widget--title">{{widgetData.data.title}}</h2>
+      </div>
+      <div class="widget--content-wrp">
+        <mr-graph mr-graph-data="widgetData.data.graphData" mr-graph-name="widgetData.data.graphName"></mr-graph>
+      </div>
+    </div>
+    <div class="widget--footnote">
+      <h6 class="widget--footnote-title">{{widgetData.data.footnote.title}}</h6>
+      <div class="widget--footnote-desc">{{widgetData.data.footnote.desc}}</div>
+    </div>
+  </div>
+  <div ng-if="isEditMode" class="widget-overlay">
+    <div class="widget-overlay-btn-wrp">
+      <div ng-click="isShowEditor(true)" class="widget-overlay-btn widget-overlay-btn-edit">Edit</div>
+      <div widget-remove="removeWidget()" class="widget-overlay-btn widget-overlay-btn-remove">Remove</div>
+    </div>
+  </div>
+  <div ng-if="isShowEditor()">
+    <div mr-builder-editor="" mr-widget-data="widgetData" mr-close="closeEditor(isSave,data)" class="builder-editor-wrp"></div>
+  </div>
+  <div ng-switch="widgetData.data.l2File || '_undefined_'" class="widget-det"><img ng-switch-default="" ng-src="uploads/{{widgetData.data.l2File}}" class="widget-det-img"/>
+    <div ng-switch-when="_undefined_" class="widget-det-noimg">No image was uploaded</div>
+  </div>
+</div>

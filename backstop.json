@@ -1,0 +1,38 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Visual Testing",
+      "url": "build/index.html",
+      "hideSelectors": [],
+      "removeSelectors": [
+      ],
+      "selectors": [
+        "header",
+        "main",
+        "body .bs-docs-featurette:nth-of-type(1)",
+        "body .bs-docs-featurette:nth-of-type(2)",
+        "footer",
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+
+<div class="builder-editor-bg"></div>
+<div class="builder-editor">
+  <div class="builder-editor-hdr"> 
+    <div class="builder-editor-title">Create Component</div>
+    <div class="builder-editor-right">
+      <div ng-click="close(false)" class="builder-close builder-btn-cancel">Cancel</div>
+      <div ng-click="close(true)" class="builder-close">Save</div>
+    </div>
+  </div>
+  <div class="builder-container c-clearfix">
+    <div class="builder-column-left">
+      <div class="builder-editor-row c-clearfix">
+        <div class="builder-editor-label">Title</div>
+        <div class="builder-editor-field"> 
+          <input type="text" ng-model="editedData.title" placeholder="TITLE"/>
+        </div>
+      </div>
+      <div class="builder-editor-row c-clearfix">
+        <div class="builder-editor-label">Component</div>
+        <div class="builder-editor-field builder-editor-arrow">
+          <nl-selectbx required="required" ng-model="editedData.graphName" nl-selectbx-options="entry for entry in builderWidgetsNames"></nl-selectbx>
+        </div>
+      </div>
+      <div ng-show="widget.widgetType!='wide'" class="builder-editor-row c-clearfix">
+        <div class="builder-editor-label">Footnote</div>
+        <div class="builder-editor-field"> 
+          <input type="text" ng-model="editedData.footnote.title" placeholder="TITLE"/>
+        </div>
+      </div>
+      <div ng-show="widget.widgetType!='wide'" class="builder-editor-row c-clearfix">
+        <div class="builder-editor-label"> </div>
+        <div class="builder-editor-field">
+          <textarea ng-model="editedData.footnote.desc" placeholder="CONTENT"></textarea>
+        </div>
+      </div>
+      <div class="builder-editor-row c-clearfix">
+        <div class="builder-editor-label">L2 Image</div>
+        <div class="builder-editor-field">
+          <div mr-file-upload="editedData.l2File"></div>
+        </div>
+      </div>
+    </div>
+    <div class="builder-column-right">
+      <form name="BuilderForm" class="graphbuilder">
+        <div class="graphbuilder-title"><img ng-src="images/graph/{{editedData.graphIcon}}" class="graphbuilder-icon"/><span>{{editedData.graphName}} Data</span></div>
+        <div ng-attr-class="{{'graphbuilder-formtype-'+grid.gs.type}} {{grid.gs.className?grid.gs.className:''}}" class="c-clearfix">
+          <div ng-if="!grid.gridSupportor.isColumnsFixed" class="graphbuilder-hdr graphbuilder-row">
+            <div ng-repeat="column in grid.labelData | limitTo:grid.gs.maxColNo track by $index " class="graphbuilder-column"><span ng-if="column.name!='label'">
+                <input type="text" ng-model="column.name" placeholder="Region {{$index}}"/><span class="graphbuilder-form-btn"><img src="images/removeicon.png" ng-click="grid.deleteColumn(column)" ng-show="grid.isAllowDeleteColumn()" class="graphbuilder-hdr-btn"/></span></span></div>
+            <div class="graphbuilder-column graphbuilder-form-btn"><img src="images/addicon.png" ng-click="grid.addColumn()" ng-show="grid.isAllowAddColumn()"/></div>
+          </div>
+          <div ng-repeat="row in grid.rowData | limitTo:grid.gs.maxRowNo track by $index " class="graphbuilder-row">
+            <div ng-repeat="column in grid.labelData | limitTo:grid.gs.maxColNo  track by column.id " class="graphbuilder-column"><span ng-switch="column.form.type"><span ng-switch-when="select">
+                  <nl-selectbx required="required" ng-model="row[column.id]" ng-init="row[column.id]=grid.setModel(column,row[column.id])" nl-selectbx-options="color.name for color in grid.getSrc(column)"></nl-selectbx></span><span ng-switch-when="file"><span mr-file-upload="row[column.id]"></span></span><span ng-switch-when="textarea">
+                  <textarea placeholder="{{column.placeholder}}" ng-model="row[column.id]" ng-required="!column.form.optional"></textarea></span>
+                <input ng-switch-when="number" type="number" ng-model="row[column.id]" placeholder="{{column.placeholder}}" ng-disabled="!column.name" ng-required="!column.form.optional" max="{{column.form.max}}" min="{{column.form.min}}"/>
+                <input ng-switch-default="" ng-attr-type="{{column.form.type}}" ng-model="row[column.id]" placeholder="{{column.placeholder}}" ng-disabled="!column.name" ng-required="!column.form.optional"/></span>
+            </div>
+            <div class="graphbuilder-column graphbuilder-form-btn"><img src="images/removeicon.png" ng-click="grid.deleteRow(row)" ng-show="grid.isAllowDeleteRow()"/></div>
+          </div>
+        </div>
+        <div ng-click="grid.addRow()" ng-show="grid.isAllowAddRow()" class="graphbuilder-plus"> <img src="images/addicon.png"/><span>ADD DATA</span></div>
+        <div class="graphbuilder-lendisplay">min {{grid.gridSupportor.minRowNo}} /  max {{grid.gridSupportor.maxRowNo}} rows</div>
+      </form>
+    </div>
+  </div>
+</div>

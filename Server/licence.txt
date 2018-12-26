@@ -1,0 +1,47 @@
+END-USER LICENSE AGREEMENT FOR Catamera software.
+ 
+IMPORTANT PLEASE READ THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT CAREFULLY BEFORE USING THIS SOFTWARE: This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and Moonraft Innovation Labs, henceforth known as Moonraft, for the Moonraft’s software product(s) identified above which may include associated software components and "online" or electronic documentation ("SOFTWARE PRODUCT"). By installing, copying, or otherwise using the SOFTWARE PRODUCT, you agree to be bound by the terms of this EULA. This license agreement represents the entire agreement concerning the program between you and Moonraft, (referred to as "licensor"), and it supersedes any prior proposal, representation, or understanding between the parties. If you do not agree to the terms of this EULA, do not install or use the SOFTWARE PRODUCT.
+The SOFTWARE PRODUCT is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. 
+
+The SOFTWARE PRODUCT is licensed, not sold.
+
+1.	GRANT OF LICENSE 
+The SOFTWARE PRODUCT is licensed as follows: 
+(a) Use: Moonraft grants you the non-exclusive, no-charge license to use the SOFTWARE PRODUCT on your computer for you evaluation purposes.  
+
+2.	DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS.
+(a) Maintenance of Copyright Notices: You must not remove or alter any copyright notices on any and all copies of the SOFTWARE PRODUCT.
+(b) Distribution: You may not distribute registered copies of the SOFTWARE PRODUCT to third parties.
+(c) Prohibition on Reverse Engineering, De-compilation, and Disassembly: You may not reverse engineer, decompile, or disassemble the SOFTWARE PRODUCT, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation. 
+(d) Rental: You may not rent, lease, or lend the SOFTWARE PRODUCT.
+(e) Support Services: Moonraft may provide you with support services related to the SOFTWARE PRODUCT. Any supplemental software code provided to you as part of the Support Services shall be considered part of the SOFTWARE PRODUCT and subject to the terms and conditions of this EULA. 
+(f) Compliance with Applicable Laws: You must comply with all applicable laws regarding use of the SOFTWARE PRODUCT.
+Failure to comply with the restrictions and limitations contained in this Section 2 shall result in immediate, automatic termination of the license granted hereunder and may subject you to civil and/or criminal liability.
+3.	PROPRIETARY RIGHTS
+All intellectual property rights in the Software Product and user documentation are owned by Moonraft and are protected by law. The structure, organization and code of the Software Product are the valuable trade secrets and confidential information of Moonraft. You shall not remove any product identification, copyright notices or proprietary restrictions from the SOFTWARE PRODUCT.
+
+4.	TERMINATION 
+This License Agreement is effective until terminated. You may terminate the License Agreement at any time by (i) removing the SOFTWARE PRODUCT from your hard drive; and (ii) notifying Licensor of your intention to terminate this License Agreement. Licensor may, at its discretion, terminate this License agreement in the event that you fail to comply with the terms and conditions contained herein. In such event, you must immediately remove the SOFTWARE PRODUCT from your hard drive. Upon termination of this Agreement for any reason, all licenses granted herein shall immediately terminate.
+
+5.	COPYRIGHT
+All title, including but not limited to copyrights, in and to the SOFTWARE PRODUCT and any copies thereof are owned by Moonraft or its suppliers. All title and intellectual property rights in and to the content which may be accessed through use of the SOFTWARE PRODUCT is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This EULA grants you no rights to use such content. All rights not expressly granted are reserved by Moonraft.
+
+6.	NO WARRANTIES 
+MOONRAFT EXPRESSLY DISCLAIMS ANY WARRANTY FOR THE SOFTWARE PRODUCT AND ITS DEPENDENCIES. THE SOFTWARE PRODUCT IS PROVIDED 'AS IS' WITHOUT ANY EXPRESS OR IMPLIED WARRANTY OF ANY KIND, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS OF A PARTICULAR PURPOSE. Moonraft does not warrant or assume responsibility for the accuracy or completeness of any information, text, graphics, links or other items contained within the SOFTWARE PRODUCT. Moonraft makes no warranties respecting any harm that may be caused by the transmission of a computer virus, worm, time bomb, logic bomb, or other such computer program. Moonraft further expressly disclaims any warranty or representation to Authorized Users or to any third party.
+
+7.	NO SUPPORT
+Moonraft is not liable to provide any kind of support for the SOFTWARE PRODUCT unless, Moonraft explicitly agrees to do it and in such a case, the terms of the support would be defined by a mutual agreement
+
+8.	LIMITATION OF LIABILITY
+THE LICENSOR SHALL NOT BE LIABLE IN ANY WAY FOR LOSS OR DAMAGE OF ANY KIND RESULTING FROM THE USE OF THE SOFTWARE PRODUCT, INCLUDING, BUT NOT LIMITED TO, LOSS OF DATA, LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES. FURTHER, LICENSOR SHALL NOT BE LIABLE IN ANY WAY FOR THE LOSS OR DAMAGE TO PRODUCT DATA, LAYOUTS, TEMPLATES, ARTWORK, PRICING AND OTHER INFORMATION STORED BY THE SOFTWARE. LICENSOR SHALL NOT BE RESPONSIBLE FOR ANY INTERRUPTIONS OF SERVICE, INCLUDING, BUT NOT LIMITED TO, ISP DISRUPTIONS, SOFTWARE OR HARDWARE FAILURES OR ANY OTHER EVENT WHICH MAY RESULT IN A LOSS OF DATA OR DISRUPTION OF SERVICE. IN NO EVENT WILL LICENSOR BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES. Some countries and regions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitations may not apply to you.
+
+9.	CHANGES TO THE AGREEMENT.
+Moonraft reserves the right, at its sole discretion, to change, modify, add to, supplement or delete any of the terms and conditions of this License Agreement when Moonraft upgrades the SOFTWARE PRODUCT, effective  as follows: Moonraft will post notification of any such changes to this License Agreement on the Moonraft.com website and will post the revised version of this License Agreement in this location, and may provide such other notice as Moonraft may elect in its sole discretion, which may include by email, postal mail or pop-up screen.
+
+
+
+
+
+
+
+

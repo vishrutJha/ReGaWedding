@@ -1,0 +1,50 @@
+{
+  "name": "MoonraftScaffold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer-core": "^5.1.9",
+    "backstopjs": "^0.4.1",
+    "browser-sync": "^2.6.4",
+    "grunt": "^0.4.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-batch": "^0.0.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-copy": "^0.0.2",
+    "gulp-filter": "^2.0.2",
+    "gulp-grunt": "^0.5.2",
+    "gulp-jade": "^1.0.0",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-pixrem": "^0.1.4",
+    "gulp-postcss": "^5.1.1",
+    "gulp-react": "^3.0.1",
+    "gulp-rimraf": "^0.0.1",
+    "gulp-sass": "^2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylestats": "^0.5.6",
+    "gulp-uglify": "^1.2.0",
+    "gulp-usemin": "^0.3.11",
+    "gulp-util": "^3.0.4",
+    "gulp-wait": "^0.0.2",
+    "jade": "^1.9.2",
+    "lodash": "^3.7.0",
+    "run-sequence": "^1.0.2",
+    "watchify": "^3.1.1"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.2",
+    "gulp-debug": "^2.0.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-typeset": "0.0.1",
+    "gulp-watch": "^4.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

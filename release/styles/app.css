@@ -1,0 +1,4 @@
+body {
+  color: blue;
+  -webkit-transition: 2s all;
+          transition: 2s all; }

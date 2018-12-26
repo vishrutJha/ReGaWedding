@@ -1,0 +1,19 @@
+{
+  "name": "Moonraft",
+  "version": "0.0.0",
+  "authors": [
+    "Nilaf Talapady <nilaf@moonraft.ocm>"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.transit": "^0.9.12",
+    "foundation-sites": "^6.3.1"
+  }
+}

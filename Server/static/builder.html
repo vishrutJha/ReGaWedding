@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="GridController">
+  <head>
+    <title>Tmobile - Dashboard Builder</title>
+    <!--Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" rel="stylesheet" type="text/css">
+    <script>
+      window.isBuilder = true;
+      window.isDisplay = false
+    </script>
+    <!--stylesheet--><!-- build:css css/app.min.css -->
+    <link rel="stylesheet" type="text/css" href="styles/app.css"><!-- endbuild -->
+    <link rel="stylesheet" type="text/css" ng-attr-href="styles/{{model.selectedThemeFile}}.css"><!-- build:js1 js/vendor.js -->
+    <script src="bower/jquery/dist/jquery.min.js"></script>
+    <script src="bower/jqueryui/jquery-ui.min.js"></script>
+    <script src="bower/d3/d3.js"></script>
+    <script src="bower/jquery.transit/jquery.transit.js"></script>
+    <script src="bower/angular/angular.min.js"></script>
+    <script src="bower/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="bower/velocity/velocity.min.js"></script>
+    <script src="bower/socket.io-client/dist/socket.io.min.js"></script><!-- endbuild -->
+    <!-- build:js2 js/app.min.js -->
+    <script src="scripts/helper.js"></script>
+    <script src="scripts/builder/widgetbuilder.js"></script>
+    <script src="scripts/d3_widgets.js"></script>
+    <script src="scripts/mrtheme.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/builderconfig.js"></script>
+    <script src="scripts/builder.js"></script>
+    <script src="scripts/graphs.js"></script>
+    <script src="scripts/widgets/piegraph.js"></script>
+    <script src="scripts/widgets/linegraph.js"></script>
+    <script src="scripts/widgets/areagraph.js"></script>
+    <script src="scripts/widgets/stackedbargraph.js"></script>
+    <script src="scripts/widgets/columngraph.js"></script>
+    <script src="scripts/widgets/imagewidget.js"></script>
+    <script src="scripts/widgets/listwidget.js"></script>
+    <script src="scripts/widgets/tablewidget.js"></script>
+    <script src="scripts/widget.js"></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/nlselectbx.js"></script>
+    <script src="scripts/mrfileupload.js"></script>
+    <script src="scripts/server.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      var socket = io.connect('http://' + document.domain + ':' + location.port+'/api/remote');
+      socket.on('connect', function() {
+          socket.emit('my event', {data: 'I\'m connected!'});
+      });
+      
+    </script>
+    <script src="scripts/remote.js"></script><!-- endbuild -->
+  </head>
+  <body class="ng-clock">
+    <div ng-class="{'mode-builder':isBuilder,'mode-display':isDisplay}">
+      <div class="dash-wrp">
+        <div class="header">
+          <div class="header-inner c-clearfix"> 
+            <div class="header-left"> <img src="images/logo.png" class="header-logo"></div>
+            <div class="header-theme">
+              <nl-selectbx ng-if="isBuilder" required ng-model="model.selectedTheme" nl-selectbx-options="entry for entry in themes"></nl-selectbx>
+            </div>
+            <div class="header-right">
+              <div ng-if="isBuilder" class="header-btn-wrp c-clearfix">
+                <div ng-click="publish()" ng-class="{'is-active':server.queue.length}" class="header-btn">Publish</div>
+                <div ng-if="showLoader" class="header-loader">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewbox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                    <path opacity="0.2" stroke-width="3" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946                            s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634                            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path>
+                    <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z" transform="rotate(53.3388 20 20)" stroke-width="3">
+                      <animatetransform attributetype="xml" attributename="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatcount="indefinite"></animatetransform>
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <nl-selectbx ng-if="!isBuilder" required ng-model="model.selectedGridDate" nl-selectbx-options="entry for entry in formattedDateForGrid"></nl-selectbx>
+            </div>
+          </div>
+        </div>
+        <div mr-carousel="model.activeGridIndex" mr-carousel-data="gridList">
+          <div class="dash">
+            <div class="dash-inner c-clearfix">
+              <mr-widget ng-repeat="widget in grid.gridData track by $index" widget-id="widget.id" widget-type="widget.type" widget-on-edit="widgetUpdated(newId,oldId)" mr-go-detail="goToDetail" ng-class="widgetClass(widget)" g-class="'widget-'+widget.type" mr-edit-mode="isBuilder" widget-events="widgetEvents(eventName,data)"></mr-widget>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-controller="Builder" ng-if="isBuilder" mr-builder-draggable="" class="builder-box">
+        <div class="c-clearfix"> 
+          <div class="builder-title">Components</div>
+        </div>
+        <div mr-builder-draggable-source="" class="builder-drag"></div>
+        <div class="builder-scroller">
+          <div ng-repeat="widget in builderWidgets track by $index" mr-widget-draggable="" mr-widget-name="{{widget.name}}" class="builder-widget"><img width="30" ng-src="images/graph/{{widget.graphIcon}}" class="builder-widget-icon"><span class="builder-widget-name">{{widget.name}}</span></div>
+        </div>
+      </div>
+      <div class="det-fake"></div>
+      <div class="det">
+        <div class="det-content"></div>
+        <div class="det-close hide-for-display"> <img src="images/close-btn.png"></div>
+      </div>
+    </div>
+  </body>
+</html>
