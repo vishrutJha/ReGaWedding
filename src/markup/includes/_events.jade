@@ -1,40 +1,50 @@
-#fh5co-event.fh5co-bg(style='background-image:url(images/img_bg_3.jpg);')
-        .overlay
-        .container
-          .row
-            .col-md-8.col-md-offset-2.text-center.fh5co-heading.animate-box
-              span Our Special Events
-              h2 Wedding Events
-          .row
-            .display-t
-              .display-tc
-                .col-md-10.col-md-offset-1
-                  .col-md-6.col-sm-6.text-center
-                    .event-wrap.animate-box
-                      h3 Mehndi Night
-                      .event-col
-                        i.icon-clock
-                        span 7:30 PM
-                        span 10:00 PM
-                      .event-col
-                        i.icon-calendar
-                        span Friday 8
-                        span March, 2018
-                      <div class="resort_name">Calista Resort</div>
-                      p
-                        | 37/2-4 Old, NH 48, Kapashera, New Delhi, Delhi 110037
-                  .col-md-6.col-sm-6.text-center
-                    .event-wrap.animate-box
-                      h3 Wedding
-                      .event-col
-                        i.icon-clock
-                        span 4:30 PM
-                        span 10:00 PM
-                      .event-col
-                        i.icon-calendar
-                        span Saturday 8
-                        span March, 2018
-                      <div class="resort_name">Calista Resort</div>
-                      p
-                        | 37/2-4 Old, NH 48, Kapashera, New Delhi, Delhi 110037
-      
+// start events-section
+section#events.events-section.section-padding
+  .container
+    .row
+      .col.col-xs-12
+        .section-title
+          .vertical-line
+            span
+              i.fi.flaticon-two
+          h2 Wedding events
+    // end section-title
+    .row
+      .col.col-lg-10.col-lg-offset-1
+        .event
+          .img-holder
+            img.img.img-responsive(src='./images/img-1(2).jpg', alt='')
+          .details
+            h3 Sangeet Night
+            ul
+              li
+                i.fa.fa-map-marker
+                |  37/2-4 Old, NH 48, Kapashera, New Delhi, Delhi 110037
+              li
+                i.fa.fa-clock-o
+                |  Mar 08 2018, 7:30PM
+            p
+              | when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            a.see-location-btn.popup-gmaps(href='https://www.google.com/maps/dir//calista+resort/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390d1be04a8dcced:0xf80072a62212bf11?ved=2ahUKEwiMmeKY-MLfAhVJuI8KHZlGA6YQ9RcwC3oECAYQDg')
+              | See location 
+              i.fa.fa-angle-right
+        .event
+          .img-holder
+            img.img.img-responsive(src='./images/img-2(2).jpg', alt='')
+          .details
+            h3 Wedding party
+            ul
+              li
+                i.fa.fa-map-marker
+                |  37/2-4 Old, NH 48, Kapashera, New Delhi, Delhi 110037
+              li
+                i.fa.fa-clock-o
+                |  Mar 09 2018, 4:30PM
+            p
+              | when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            a.see-location-btn.popup-gmaps(href='https://www.google.com/maps/dir/13.0695205,77.5822844/calista+resort/@20.5892086,69.3121196,5z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390d1be04a8dcced:0xf80072a62212bf11!2m2!1d77.0833312!2d28.5200261')
+              | See location 
+              i.fa.fa-angle-right
+    // end row
+    // end container
+// end events-section

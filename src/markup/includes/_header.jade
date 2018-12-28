@@ -1,16 +1,71 @@
-nav.fh5co-nav(role='navigation')
+// Start header
+header#header.site-header.header-style-2
+  nav.navigation.navbar.navbar-default.original(style='visibility: hidden;')
     .container
-      .row
-        .col-xs-2
-          #fh5co-logo
-            a(href='index.html')
-              | #ReGa
-              strong .
-        //- .col-xs-10.text-right.menu-1
-        //-   ul
-        //-     li.active
-        //-       a(href='index.html') Home
-        //-     li
-        //-       a(href='about.html') Story
-        //-     //- li
-        //-     //-   a(href='contact.html') Contact
+      .navbar-header
+        button.open-btn(type='button')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .couple-logo
+          h1
+            a(href='http://irsfoundation.com/tf/templates/wedding/lovely-wedding/lovely-wedding/index-2.html#home')
+              | Re 
+              i.fi.flaticon-shape-1
+              | Ga
+      #navbar.navbar-collapse.collapse.navbar-right.navigation-holder
+        button.close-navbar
+          i.fa.fa-close
+        ul.nav.navbar-nav
+          li
+            a(href='#home') Home
+          li
+            a(href='#couple') Us
+          li
+            a(href='#story') Story
+          li
+            a(href='#events') Events
+          li
+            a(href='#people') Venus
+          li
+            a(href='#gallery') Gallery
+          li
+            a(href='#rsvp') Memories
+          // end of nav-collapse
+      // end of container
+  nav.navigation.navbar.navbar-default.sticky-2.sticky-on(style='width: 1430px;')
+    .container
+      .navbar-header
+        button.open-btn(type='button')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .couple-logo
+          h1
+            a(href='http://irsfoundation.com/tf/templates/wedding/lovely-wedding/lovely-wedding/index-2.html#home')
+              | Re 
+              i.fi.flaticon-shape-1
+              |  Ga
+      #navbar.navbar-collapse.collapse.navbar-right.navigation-holder
+        button.close-navbar
+          i.fa.fa-close
+        ul.nav.navbar-nav
+          li
+            a(href='./index.html#home') Home
+          li
+            a(href='./index.html#couple') Us
+          li
+            a(href='./index.html#story') Story
+          li
+            a(href='./index.html#events') Events
+          li
+            a(href='./index.htm#people') Venus
+          li
+            a(href='./index.htm#gallery') Gallery
+          li
+            a(href='./index.html#rsvp') Memories
+             // end of nav-collapse
+      // end of container
+// end of header

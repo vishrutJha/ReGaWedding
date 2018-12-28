@@ -1,15 +1,12 @@
 /*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2015 Daniel Eden
-*/
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Daniel Eden
+ */
 .animated {
   animation-duration: 1s;
-  animation-fill-mode: both; }
-
-.animated-fast {
-  animation-duration: .5s;
   animation-fill-mode: both; }
 
 .animated.infinite {
@@ -18,12 +15,10 @@ Copyright (c) 2015 Daniel Eden
 .animated.hinge {
   animation-duration: 2s; }
 
+.animated.flipOutX,
+.animated.flipOutY,
 .animated.bounceIn,
 .animated.bounceOut {
-  animation-duration: .75s; }
-
-.animated.flipOutX,
-.animated.flipOutY {
   animation-duration: .75s; }
 
 @keyframes bounce {
@@ -95,6 +90,24 @@ Copyright (c) 2015 Daniel Eden
 
 .shake {
   animation-name: shake; }
+
+@keyframes headShake {
+  0% {
+    transform: translateX(0); }
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg); }
+  18.5% {
+    transform: translateX(5px) rotateY(7deg); }
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg); }
+  43.5% {
+    transform: translateX(2px) rotateY(3deg); }
+  50% {
+    transform: translateX(0); } }
+
+.headShake {
+  animation-timing-function: ease-in-out;
+  animation-name: headShake; }
 
 @keyframes swing {
   20% {
@@ -333,13 +346,9 @@ Copyright (c) 2015 Daniel Eden
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    -ms-transform: scale(0.95);
-    transform: scale(0.95); }
+    opacity: 0; }
   to {
-    opacity: 1;
-    -ms-transform: scale(1);
-    transform: scale(1); } }
+    opacity: 1; } }
 
 .fadeIn {
   animation-name: fadeIn; }
@@ -347,9 +356,7 @@ Copyright (c) 2015 Daniel Eden
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    /*-webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);*/
-    transform: translate3d(0, -50px, 0); }
+    transform: translate3d(0, -100%, 0); }
   to {
     opacity: 1;
     transform: none; } }
@@ -371,9 +378,7 @@ Copyright (c) 2015 Daniel Eden
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    /*-webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);*/
-    transform: translate3d(-50px, 0, 0); }
+    transform: translate3d(-100%, 0, 0); }
   to {
     opacity: 1;
     transform: none; } }
@@ -395,9 +400,7 @@ Copyright (c) 2015 Daniel Eden
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    /*-webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);*/
-    transform: translate3d(50px, 0, 0); }
+    transform: translate3d(100%, 0, 0); }
   to {
     opacity: 1;
     transform: none; } }
@@ -419,32 +422,13 @@ Copyright (c) 2015 Daniel Eden
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    visibility: hidden;
-    /*-webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);*/
-    transform: translate3d(0, 40px, 0); }
+    transform: translate3d(0, 100%, 0); }
   to {
-    visibility: visible;
     opacity: 1;
     transform: none; } }
 
 .fadeInUp {
   animation-name: fadeInUp; }
-
-@keyframes fadeInUpMenu {
-  from {
-    opacity: 0;
-    visibility: hidden;
-    /*-webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);*/
-    transform: translate3d(0, 20px, 0); }
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: none; } }
-
-.fadeInUpMenu {
-  animation-name: fadeInUpMenu; }
 
 @keyframes fadeInUpBig {
   from {
@@ -471,7 +455,7 @@ Copyright (c) 2015 Daniel Eden
     opacity: 1; }
   to {
     opacity: 0;
-    transform: translate3d(0, 40px, 0); } }
+    transform: translate3d(0, 100%, 0); } }
 
 .fadeOutDown {
   animation-name: fadeOutDown; }
@@ -1039,3 +1023,109 @@ Copyright (c) 2015 Daniel Eden
 
 .slideOutUp {
   animation-name: slideOutUp; }
+
+/**************************************************
+ = custom animation
+***************************************************/
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.3, 1.3, 1.3); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+.pulse {
+  animation-name: pulse; }
+
+/*fadeInLeft slow*/
+
+@keyframes fadeInLeftSlow {
+  from {
+    opacity: 0;
+    transform: translate3d(-5%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInLeftSlow {
+  animation-name: fadeInLeftSlow; }
+
+/*fadeInRight slow*/
+
+@keyframes fadeInRightSlow {
+  from {
+    opacity: 0;
+    transform: translate3d(5%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+.fadeInRightSlow {
+  animation-name: fadeInRightSlow; }
+
+/*slideOut slow*/
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0); } }
+
+.slideOutLeft {
+  animation: slideOutLeft 2s cubic-bezier(0.26, 0.92, 0.47, 1) 1.5s alternate forwards; }
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0); } }
+
+.slideOutRight {
+  animation: slideOutRight 2s cubic-bezier(0.26, 0.92, 0.47, 1) 1.5s alternate forwards; }
+
+@keyframes fadeInSlow {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeInSlow {
+  animation: fadeInSlow 3s; }
+
+/*@-webkit-keyframes logo-shape-animation {
+  from {
+    opacity: 0 !important;
+    -webkit-transform: translate3d(0, -100%, 0) !important;
+    transform: translate3d(0, -100%, 0) !important;
+  }
+
+  to {
+    opacity: 1 !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
+
+@keyframes logo-shape-animation {
+  from {
+    opacity: 0 !important;
+    -webkit-transform: translate3d(0, -100%, 0) !important;
+    transform: translate3d(0, -100%, 0) !important;
+  }
+
+  to {
+    opacity: 1 !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
+
+.logo-shape-animation {
+  -webkit-animation-name: logo-shape-animation 0.5s 1.5s forwards;
+  animation-name: logo-shape-animation 0.5s 1.5s forwards;
+}
+*/
