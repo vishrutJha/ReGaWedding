@@ -1,0 +1,44 @@
+// start rsvp-section
+section#rsvp.rsvp-section.section-padding.parallax(data-bg-image='images/rsvp-bg.jpg', data-speed='7', style='background-image: url("images/rsvp-bg.jpg"); background-position: 50% 285.598px; background-size: cover;')
+  .container
+    .row
+      .col.col-xs-12
+        .section-title-white
+          .vertical-line
+            span
+              i.fi.flaticon-two
+          h2 Join our party
+    // end section-title
+    .row.content
+      .col.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        p Please reserve before December 16th, 2017.
+        form#rsvp-form.form.validate-rsvp-form.row(method='post', novalidate='novalidate')
+          .col.col-sm-6
+            input.form-control(type='text', name='name', placeholder='Your Name*')
+          .col.col-sm-6
+            input.form-control(type='email', name='email', placeholder='Your Email*')
+          .col.col-sm-6
+            select.form-control(name='guest')
+              option(disabled='', selected='') Number Of Guest*
+              option 1
+              option 2
+              option 3
+              option 4
+          .col.col-sm-6
+            select.form-control(name='events')
+              option(disabled='', selected='') I Am Attending*
+              option Al events
+              option Wedding ceremony
+              option Reception party
+          .col.col-sm-12
+            textarea.form-control(name='notes', placeholder='Your Message*')
+          .col.col-sm-12.submit-btn
+            button.submit(type='submit') Send Invitation
+            span#loader
+              i.fa.fa-refresh.fa-spin.fa-3x.fa-fw
+          .col.col-md-12.success-error-message
+            #success Thank you
+            #error  Error occurred while sending email. Please try again later. 
+    // end row
+    // end container
+// end rsvp-section
