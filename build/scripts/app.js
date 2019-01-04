@@ -182,10 +182,10 @@
     function heroSlider() {
         if ($(".hero-slider").length) {
             $(".hero-slider").slick({
-                arrows: true,
+                arrows: false,
                 prevArrow: '<button type="button" class="slick-prev">Previous</button>',
                 nextArrow: '<button type="button" class="slick-next">Next</button>',
-                dots: true,
+                dots: false,
                 fade: true,
                 cssEase: 'linear'
             });
