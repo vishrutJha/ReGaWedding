@@ -11,7 +11,7 @@ html(lang='en')
     link(rel='shortcut icon', type='image/png', href='images/favicon.png')
     link(rel='shortcut icon', type='image/png', href='images/favicon16x16.png')
     link(rel='shortcut icon', type='image/png', href='images/favicon-32x32.png')
-
+    script(type='text/javascript', src='https://addevent.com/libs/atc/1.6.1/atc.min.js', async='', defer='')
     //- // Facebook and Twitter integration
     //- meta(property='og:title', content='')
     //- meta(property='og:image', content='')
@@ -37,7 +37,7 @@ html(lang='en')
     link(rel='stylesheet', href='styles/owl.carousel.min.css')
     link(rel='stylesheet', href='styles/owl.theme.default.min.css')
     // Theme style
-    link(rel='stylesheet', href='styles/app.css')
+    link(rel='stylesheet', href='styles/style.css')
     // Modernizr JS
     script(src='scripts/modernizr-2.6.2.min.js')
     // FOR IE9 below
@@ -47,7 +47,7 @@ html(lang='en')
     .fh5co-loader
     #page
       include ./includes/_header.jade
-      header#fh5co-header.fh5co-cover(role='banner', style='background-image:url(images/img_bg_2.jpg);', data-stellar-background-ratio='0.5')
+      header#fh5co-header.fh5co-cover(role='banner', style='background-image:url(images/header.jpg); background-position: 0px 10px;', data-stellar-background-ratio='1', data-stellar-vertical-offset="150")
         .overlay
         .container
           .row
@@ -55,15 +55,24 @@ html(lang='en')
               .display-t
                 .display-tc.animate-box(data-animate-effect='fadeIn')
                   h1 Gautam & Rekha
-                  h2 We Are Getting Married
+                  .wearetext We Are Getting Married
                   .simply-countdown.simply-countdown-one
-      #fh5co-couple
+                  p
+                    button.btn.btn-default.btn-sm.addeventatc(title='Save The Date')
+                      | Save The date
+                      span.start 03/09/2019 04:00 PM
+                      span.end 03/09/2019 10:00 PM
+                      span.timezone Asia/New_Delhi
+                      span.title Rekha and Gautam's Wedding
+                      span.description Come witness the wedding of the year, where a punjabi gabru ties knot to a Tamil Ponnu 
+                      span.location 37/2-4 Old, NH 48, Kapashera, New Delhi, Delhi 110037
+      .fh5co-couple#us
         .container
           .row
             .col-md-8.col-md-offset-2.text-center.fh5co-heading.animate-box
               h2 Hello!
               h3 March 9, 2019 New Delhi, India
-              p We invite you to celebrate our wedding
+              p You are cordially invited to be a part of our wedding celebrations
           .couple-wrap.animate-box
             .couple-half
               .groom
@@ -81,8 +90,7 @@ html(lang='en')
                 h3 Rekha Ravi
                 p
                   | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-      include ./includes/_events.jade
-      #fh5co-couple-story
+      .fh5co-couple-story#story
         .container
           .row
             .col-md-8.col-md-offset-2.text-center.fh5co-heading.animate-box
@@ -120,6 +128,29 @@ html(lang='en')
                     .timeline-body
                       p
                         | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+      include ./includes/_events.jade
+      
+      .fh5co-started.fh5co-bg#rsvp(style='background-image:url(images/img_bg_4.jpg);')
+        .overlay
+        .container
+          .row.animate-box
+            .col-md-8.col-md-offset-2.text-center.fh5co-heading
+              h2 Are You Attending?
+              p Please Fill-up the form to notify you that you're attending. Thanks.
+          .row.animate-box
+            .col-md-10.col-md-offset-1
+              form.form-inline
+                .col-md-4.col-sm-4
+                  .form-group
+                    label.sr-only(for='name') Name
+                    input#name.form-control(type='name', placeholder='Name')
+                .col-md-4.col-sm-4
+                  .form-group
+                    label.sr-only(for='email') Email
+                    input#email.form-control(type='email', placeholder='Email')
+                .col-md-4.col-sm-4
+                  button.btn.btn-default.btn-block(type='submit') I am Attending
+    
       #fh5co-gallery.fh5co-section-gray
         .container
           .row
@@ -176,31 +207,12 @@ html(lang='en')
                     .case-studies-summary
                       span 56 Photos
                       h2 Beautiful sunset
-      #fh5co-started.fh5co-bg(style='background-image:url(images/img_bg_4.jpg);')
-        .overlay
-        .container
-          .row.animate-box
-            .col-md-8.col-md-offset-2.text-center.fh5co-heading
-              h2 Are You Attending?
-              p Please Fill-up the form to notify you that you're attending. Thanks.
-          .row.animate-box
-            .col-md-10.col-md-offset-1
-              form.form-inline
-                .col-md-4.col-sm-4
-                  .form-group
-                    label.sr-only(for='name') Name
-                    input#name.form-control(type='name', placeholder='Name')
-                .col-md-4.col-sm-4
-                  .form-group
-                    label.sr-only(for='email') Email
-                    input#email.form-control(type='email', placeholder='Email')
-                .col-md-4.col-sm-4
-                  button.btn.btn-default.btn-block(type='submit') I am Attending
     .gototop.js-top
       a.js-gotop(href='#')
         i.icon-arrow-up
     // jQuery
     script(src='scripts/jquery.min.js')
+    script(src="scripts/jquery-sticky.js")
     // jQuery Easing
     script(src='scripts/jquery.easing.1.3.js')
     // Bootstrap
@@ -213,6 +225,7 @@ html(lang='en')
     script(src='scripts/jquery.countTo.js')
     // Stellar
     script(src='scripts/jquery.stellar.min.js')
+    script(src='scripts/google_map.js')
     // Magnific Popup
     script(src='scripts/jquery.magnific-popup.min.js')
     script(src='scripts/magnific-popup-options.js')
@@ -221,11 +234,15 @@ html(lang='en')
     // Main
     script(src='scripts/main.js')
     script.
+      $("#sticker").sticky({topSpacing:0});
       var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
         // default example
         simplyCountdown('.simply-countdown-one', {
         year: 2019,
         month: 3,
-        day: 9
+        day: 9,
+        hours: 20, // Default is 0 [0-23] integer
+        minutes: 0, // Default is 0 [0-59] integer
+        seconds: 0, // Default is 0 [0-59] integer
       });
 
