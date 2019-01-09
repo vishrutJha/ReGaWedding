@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6, figure {
       list-style: none;
       display: inline; }
       .fh5co-nav ul li a {
-        font-size: 14px;
+        font-size: 22px;
         padding: 30px 10px;
         text-transform: uppercase; }
       .fh5co-nav ul li.has-dropdown {
@@ -814,7 +814,7 @@ form label {
   .couple-half h3 {
     font-family: "Sacramento", Arial, serif;
     color: #F14E95;
-    font-size: 30px; }
+    font-size: 40px; }
   .couple-half .groom, .couple-half .bride {
     float: left;
     border-radius: 50%;
