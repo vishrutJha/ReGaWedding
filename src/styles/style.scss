@@ -9,7 +9,7 @@ $grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #F14E95 !default;
+$brand-primary: #ca0a5d !default;
 $brand-secondary: #118DF0 !default; 
 
 $brand-white: #fff;
@@ -178,21 +178,22 @@ h1, h2, h3, h4, h5, h6, figure {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	padding: 30px 0;
+	padding: 20px 0;
 	z-index: 1001 !important;
 	background: $brand-white;
-	-webkit-box-shadow: 2px 3px 5px 0px rgba(174,174,174,1);
--moz-box-shadow: 2px 3px 5px 0px rgba(174,174,174,1);
-box-shadow: 2px 3px 5px 0px rgba(174,174,174,1);
+	-webkit-box-shadow: 2px 3px 5px 0px rgba(241,78,149, 0.6);
+	-moz-box-shadow: 2px 3px 5px 0px rgba(241,78,149, 0.6);
+	box-shadow: 2px 3px 5px 0px rgba(241,78,149, 0.6);
 	@media screen and (max-width: $screen-sm) {
 		padding: 20px 0;
 	}
 	#fh5co-logo {
-		font-size: 40px;
+		font-size: 60px;
 		margin: 0;
 		padding: 0;
 		line-height: 40px;
 		font-family: $font-secondary;
+		font-weight: bold;
 	}
 	a {
 		padding: 5px 10px;
@@ -212,7 +213,7 @@ box-shadow: 2px 3px 5px 0px rgba(174,174,174,1);
 			list-style: none;
 			display: inline;
 			a {
-				font-size: 22px;
+				font-size: 20px;
 				padding: 30px 10px;
 				text-transform: uppercase;
 				// // color: rgba(255,255,255,.5);
@@ -693,7 +694,7 @@ box-shadow: 2px 3px 5px 0px rgba(174,174,174,1);
 
 
 // GALLERY
-#fh5co-gallery-list {
+.fh5co-gallery-list {
 	@include flexwrap;
 	@include flex;
 	position: relative;
@@ -1015,7 +1016,7 @@ form {
 .fh5co-event,
 .fh5co-couple-story,
 .fh5co-couple,
-#fh5co-gallery,
+.fh5co-gallery,
 .fh5co-section {
 	padding: 7em 0;
 	clear: both;
@@ -1066,6 +1067,7 @@ form {
 		font-family: $font-secondary;
 		color: $brand-primary;
 		font-size: 40px;
+		font-weight: bold;
 	}
 	.groom,.bride{
 		float: left;
@@ -1827,5 +1829,61 @@ form {
 }
 
 .addeventatc{
-	color: #F14E95 !important;
+	color: $brand-primary !important;
+}
+
+// .heart {
+//   background-color: red !important;
+//   height: 30px !important;
+//   transform: rotate(-45deg) !important;
+//   width: 30px !important;
+// }
+
+// .heart:before,
+// .heart:after {
+//   content: "";
+//   background-color: red !important;
+//   border-radius: 50% !important;
+//   height: 30px !important;
+//   position: absolute !important;
+//   width: 30px !important;
+// }
+
+// .heart:before {
+//   top: -15px !important;
+//   left: 0 !important;
+// }
+
+.heart-shape {
+  background-color: red !important;
+  height: 30px !important;
+  transform: rotate(-45deg) !important;
+  width: 30px !important;
+}
+
+.heart-shape:before,
+.heart-shape:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+.heart-shape:before {
+  top: -28px;
+  left: -1px;
+}
+
+.heart-shape:after { 
+	top: -28px;
+  left: -1px;
+}
+
+.resort_name {
+	color: #fff;
+	font-family: $font-secondary;
+	letter-spacing: 3px;
+	font-size: 24px;
 }
