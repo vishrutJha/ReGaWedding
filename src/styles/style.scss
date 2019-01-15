@@ -412,6 +412,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	@media screen and (max-width: $screen-sm) {
 		height: 600px;
+		background-position-x: -220px;
 	}
 	.display-t,
 	.display-tc {
@@ -610,9 +611,9 @@ h1, h2, h3, h4, h5, h6, figure {
 			z-index: 100;
 			@include border-radius(50%);
 			@media screen and (max-width: $screen-xs) {
-				width: 60px;
-				height: 60px;
-				margin-left: -20px !important;
+				width: 80px;
+				height: 80px;
+				margin-left: -25px !important;
 			}
 		}
 		&.timeline-inverted {
@@ -886,10 +887,10 @@ form {
 			line-height: 1.5;
 			font-family: $font-secondary;
 			@media screen and (max-width: $screen-sm) {
-				font-size: 40px;
+				font-size: 50px;
 			}
 			@media screen and (max-width: $screen-xs) {
-				font-size: 30px;
+				font-size: 40px;
 			}
 		}
 		h2 {
@@ -1085,10 +1086,9 @@ form {
 			width: 100%;
 			height: 140px;
 			img{
-				width: 120px;
-				height: 120px;
+				width: 180px;
+				height: 180px;
 				margin: 0 auto;
-
 			}
 		}
 	}
@@ -1113,13 +1113,21 @@ form {
 			margin-left: 0;
 			margin-right: 0;
 		}
+		.bride {
+			position: relative;
+			top: 60px;
+		}
 		.desc-groom{
 			padding-right: 0;
 			text-align: center;
+			position: relative;
+    	top: 60px;
 		}
 		.desc-bride{
 			padding-left: 0;
 			text-align: center;
+			position: relative;
+    	top: 115px;
 		}
 	}
 }
@@ -1170,6 +1178,17 @@ form {
 		margin-bottom: 2em;
 	}
 	h2 {
+		font-size: 60px;
+		margin-bottom: 10px;
+		line-height: 1.5;
+		font-weight: bold;
+		color: $brand-primary;
+		font-family: $font-secondary;
+		@media screen and (max-width: $screen-sm){
+			font-size: 40px;
+		}
+	}
+	h1 {
 		font-size: 60px;
 		margin-bottom: 10px;
 		line-height: 1.5;
@@ -1822,6 +1841,20 @@ form {
 	font-family: $font-tertiary;
 	color: $brand-white;
 	font-size: 60px;
+	@media screen and (max-width: $screen-sm) {
+		font-size: 40px;
+	}
+	@media screen and (max-width: $screen-xs) {
+		font-size: 30px;
+	}
+}
+.name-main {
+	@media screen and (max-width: $screen-sm) {
+		font-size: 50px;
+	}
+	@media screen and (max-width: $screen-xs) {
+		font-size: 40px;
+	}
 }
 
 .addeventatc_icon {
