@@ -1842,17 +1842,22 @@ form {
 	color: $brand-white;
 	font-size: 60px;
 	@media screen and (max-width: $screen-sm) {
+		margin-top: 32%;
 		font-size: 40px;
 	}
 	@media screen and (max-width: $screen-xs) {
+		margin-top: 32%;
 		font-size: 30px;
 	}
 }
+
 .name-main {
 	@media screen and (max-width: $screen-sm) {
+		margin-bottom: 25%;
 		font-size: 50px;
 	}
 	@media screen and (max-width: $screen-xs) {
+		margin-bottom: 25%;
 		font-size: 40px;
 	}
 }
