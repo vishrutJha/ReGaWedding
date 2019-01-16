@@ -119,7 +119,7 @@ html(lang='en')
                       p
                         |  Admitted it….Life would be so boring without you
                 li.animate-box
-                  .timeline-badge(style='background-image:url(images/couple-3.jpg);')
+                  .timeline-badge(style='background-image:url(images/couple-3_small.jpg);')
                   .timeline-panel
                     .timeline-heading
                       h3.timeline-title In A Relationship
@@ -127,27 +127,9 @@ html(lang='en')
                       p
                         |  Seeing you smile Makes me smile
       include ./includes/_events.jade
+      include ./includes/_location.jade
       include ./includes/_invitee.jade
-      .fh5co-started.fh5co-bg#rsvp(style='background-image:url(images/img_bg_4.jpg);')
-        .overlay
-        .container
-          .row.animate-box
-            .col-md-8.col-md-offset-2.text-center.fh5co-heading
-              h2 Are You Attending?
-              p Please Fill-up the form to notify me that you're attending. Thanks.
-          .row.animate-box
-            .col-md-10.col-md-offset-1
-              form.form-inline
-                .col-md-4.col-sm-4
-                  .form-group
-                    label.sr-only(for='name') Name
-                    input#name.form-control(type='name', placeholder='Name')
-                .col-md-4.col-sm-4
-                  .form-group
-                    label.sr-only(for='email') Email
-                    input#email.form-control(type='email', placeholder='Email')
-                .col-md-4.col-sm-4
-                  button.btn.btn-default.btn-block(type='submit') I am Attending
+      include ./includes/_rsvp.jade
     
       .fh5co-gallery.fh5co-section-gray
         .container
@@ -166,7 +148,7 @@ html(lang='en')
     .gototop.js-top
       a.js-gotop(href='#')
         i.icon-arrow-up
-    embed(src='/images/demo.mp3', width='180', height='90', loop='false', autostart='true', hidden='true')
+    //- embed(src='/images/demo.mp3', width='180', height='90', loop='false', autostart='true', hidden='true')
     // jQuery
     script(src='scripts/jquery.min.js')
     script(src="scripts/jquery-sticky.js")

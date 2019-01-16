@@ -207,6 +207,18 @@
 		}
 	};
 
+	$('#rsvpSend').on('click', function(e) {
+	  e.preventDefault();
+	  var jqxhr = $.ajax({
+	    url: 'https://docs.google.com/forms/u/1/d/e/1FAIpQLScNmWt5tSkdShaKRIFEmqRhKptVW-eR4xIYVf1rqV8loHXl5w/formResponse',
+	    method: "POST",
+	    dataType: "xml",
+	    data: $("#rsvpForm").serializeArray()
+	  }).success(
+	    $("#rsvpSend").html("Thanks for RSVP-ing!")
+	  );
+	})
+
 	// // Parallax
 	// var parallax = function() {
 	// 	$(window).stellar();

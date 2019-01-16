@@ -1,0 +1,29 @@
+.fh5co-started.fh5co-bg#rsvp(style='background-image:url(images/img_bg_4.jpg);')
+  .overlay
+  .container
+    .row.animate-box
+      .col-md-8.col-md-offset-2.text-center.fh5co-heading
+        h2 Are You Attending?
+        p Please Fill-up the form to notify me that you're attending. Thanks.
+    .row.animate-box
+      .col-md-10.col-md-offset-1
+        form#rsvpForm.form-inline
+          .col-md-8.col-sm-12
+            .col-md-6.col-sm-12
+              .form-group
+                label.sr-only(for='formName') Name
+                input#formName.form-control(type='name', name='entry.1498135098', placeholder='Name')
+            .col-md-6.col-sm-12
+              .form-group
+                label.sr-only(for='formEmail') Email
+                input#formEmail.form-control(type='email', name='entry.1424661284', placeholder='Email')
+            .col-md-6.col-sm-12
+              .form-group
+                label.sr-only(for='formPhone') Phone Number
+                input#formPhone.form-control(type='phone', name='entry.1253276469', placeholder='Phone')
+            .col-md-6.col-sm-12
+              .form-group
+                label.sr-only(for='formGuests') Number of Guests
+                input#formGuests.form-control(type='number', name='entry.2606285', placeholder='Guests')
+          .col-md-4.col-sm-12
+            button#rsvpSend.btn.btn-default.btn-block(type='submit', onclick='this.disabled=true;') I am Attending
