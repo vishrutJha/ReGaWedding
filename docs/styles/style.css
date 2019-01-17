@@ -1416,17 +1416,21 @@ form label {
   font-size: 60px; }
   @media screen and (max-width: 768px) {
     .wearetext {
+      margin-top: 32%;
       font-size: 40px; } }
   @media screen and (max-width: 480px) {
     .wearetext {
+      margin-top: 32%;
       font-size: 30px; } }
 
 @media screen and (max-width: 768px) {
   .name-main {
+    margin-bottom: 25%;
     font-size: 50px; } }
 
 @media screen and (max-width: 480px) {
   .name-main {
+    margin-bottom: 25%;
     font-size: 40px; } }
 
 .addeventatc_icon {
