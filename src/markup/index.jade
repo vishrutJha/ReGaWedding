@@ -3,7 +3,7 @@ html(lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title Rekha Gautam Wedding Invite
+    title Rekha & Gautam
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='Wedding Invitation Of Rekha And Gautam, March 9, New Delhi ')
     //- meta(name='keywords', content='free html5, free template, free bootstrap, html5, css3, mobile first, responsive')
@@ -54,9 +54,9 @@ html(lang='en')
             .col-md-8.col-md-offset-2.text-center
               .display-t
                 .display-tc.animate-box(data-animate-effect='fadeIn')
-                  h1.name-main Gautam & Rekha
-                  .wearetext We Are Getting Married
-                  .wearetext In
+                  h1.name-main Rekha & Gautam
+                  br
+                  .wearetext We Are Getting Married In
                   .simply-countdown.simply-countdown-one
                   p
                     button.btn.btn-default.btn-sm.addeventatc(title='Save The Date')
@@ -98,12 +98,12 @@ html(lang='en')
               //- h3 We Love Each Other
               h2 Our Story
               p
-                | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                | Its funny how we fall in love with the most unexpected person at the most unexpected time, setting out to an unexpected journey ... together
           .row
             .col-md-12.col-md-offset-0
               ul.timeline.animate-box
                 li.animate-box
-                  .timeline-badge(style='background-image:url(images/couple-1.jpg);')
+                  .timeline-badge(style='background-image:url(images/couple-1.jpg);top:-20px;')
                   .timeline-panel
                     .timeline-heading
                       h3.timeline-title First We Meet
@@ -111,7 +111,7 @@ html(lang='en')
                       p
                         | Its funny how we fall in love with the most unexpected person at the most unexpected time
                 li.timeline-inverted.animate-box
-                  .timeline-badge(style='background-image:url(images/couple-2.jpg);')
+                  .timeline-badge(style='background-image:url(images/couple-2.jpg);top:0px !important;')
                   .timeline-panel
                     .timeline-heading
                       h3.timeline-title First Date
@@ -119,7 +119,7 @@ html(lang='en')
                       p
                         |  Admitted it….Life would be so boring without you
                 li.animate-box
-                  .timeline-badge(style='background-image:url(images/couple-3.jpg);')
+                  .timeline-badge(style='background-image:url(images/couple-3_small.jpg);')
                   .timeline-panel
                     .timeline-heading
                       h3.timeline-title In A Relationship
@@ -127,27 +127,9 @@ html(lang='en')
                       p
                         |  Seeing you smile Makes me smile
       include ./includes/_events.jade
+      include ./includes/_location.jade
       include ./includes/_invitee.jade
-      .fh5co-started.fh5co-bg#rsvp(style='background-image:url(images/img_bg_4.jpg);')
-        .overlay
-        .container
-          .row.animate-box
-            .col-md-8.col-md-offset-2.text-center.fh5co-heading
-              h2 Are You Attending?
-              p Please Fill-up the form to notify me that you're attending. Thanks.
-          .row.animate-box
-            .col-md-10.col-md-offset-1
-              form.form-inline
-                .col-md-4.col-sm-4
-                  .form-group
-                    label.sr-only(for='name') Name
-                    input#name.form-control(type='name', placeholder='Name')
-                .col-md-4.col-sm-4
-                  .form-group
-                    label.sr-only(for='email') Email
-                    input#email.form-control(type='email', placeholder='Email')
-                .col-md-4.col-sm-4
-                  button.btn.btn-default.btn-block(type='submit') I am Attending
+      include ./includes/_rsvp.jade
     
       .fh5co-gallery.fh5co-section-gray
         .container
@@ -166,7 +148,7 @@ html(lang='en')
     .gototop.js-top
       a.js-gotop(href='#')
         i.icon-arrow-up
-    embed(src='/images/demo.mp3', width='180', height='90', loop='false', autostart='true', hidden='true')
+    //- embed(src='/images/demo.mp3', width='180', height='90', loop='false', autostart='true', hidden='true')
     // jQuery
     script(src='scripts/jquery.min.js')
     script(src="scripts/jquery-sticky.js")
