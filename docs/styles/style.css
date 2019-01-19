@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100% !important;
   padding: 20px 0;
   z-index: 1001 !important;
   background: #fff;
@@ -88,6 +88,10 @@ h1, h2, h3, h4, h5, h6, figure {
     line-height: 40px;
     font-family: "Sacramento", Arial, serif;
     font-weight: bold; }
+    @media screen and (max-width: 768px) {
+      .fh5co-nav #fh5co-logo {
+        font-size: 30px;
+        line-height: 20px; } }
   .fh5co-nav a {
     padding: 5px 10px; }
   @media screen and (max-width: 768px) {
@@ -1421,6 +1425,7 @@ form label {
   margin-top: 48%; }
   @media screen and (max-width: 768px) {
     .wearetext {
+      margin-top: 32%;
       font-size: 40px; } }
   @media screen and (max-width: 480px) {
     .wearetext {
