@@ -730,6 +730,10 @@ form label {
   border-radius: 50%;
   position: relative;
   animation: pulse 1s ease infinite; }
+  @media screen and (max-width: 768px) {
+    .simply-countdown > .simply-section {
+      width: 60px;
+      height: 60px; } }
 
 @keyframes pulse {
   0% {
@@ -745,6 +749,10 @@ form label {
   vertical-align: middle;
   height: 100px;
   width: 100px; }
+  @media screen and (max-width: 768px) {
+    .simply-countdown > .simply-section > div {
+      width: 60px;
+      height: 60px; } }
 
 .simply-countdown > .simply-section .simply-amount,
 .simply-countdown > .simply-section .simply-word {
@@ -753,14 +761,19 @@ form label {
   /* amounts and words */ }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 30px;
-  /* amounts */ }
+  font-size: 30px; }
+  @media screen and (max-width: 768px) {
+    .simply-countdown > .simply-section .simply-amount {
+      font-size: 18px; } }
 
 .simply-countdown > .simply-section .simply-word {
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   font-size: 12px;
   /* words */ }
+  @media screen and (max-width: 768px) {
+    .simply-countdown > .simply-section .simply-word {
+      font-size: 10px; } }
 
 #fh5co-testimonial,
 #fh5co-services,
@@ -769,6 +782,8 @@ form label {
 .fh5co-event,
 .fh5co-couple-story,
 .fh5co-couple,
+.fh5co-events,
+.fh5co-venue,
 .fh5co-gallery,
 .fh5co-section {
   padding: 7em 0;
@@ -781,6 +796,8 @@ form label {
     .fh5co-event,
     .fh5co-couple-story,
     .fh5co-couple,
+    .fh5co-events,
+    .fh5co-venue,
     .fh5co-gallery,
     .fh5co-section {
       padding: 3em 0; } }
@@ -1425,11 +1442,11 @@ form label {
   margin-top: 48%; }
   @media screen and (max-width: 768px) {
     .wearetext {
-      margin-top: 32%;
+      margin-top: 42%;
       font-size: 40px; } }
   @media screen and (max-width: 480px) {
     .wearetext {
-      margin-top: 52%;
+      margin-top: 90%;
       font-size: 30px; } }
 
 @media screen and (max-width: 768px) {
