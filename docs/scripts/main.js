@@ -117,7 +117,7 @@
 							}
 
 							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
+						},  400, 'easeInOutExpo' );
 					});
 					
 				}, 100);
@@ -240,7 +240,7 @@
 		// parallax();
 		offcanvasMenu();
 		burgerMenu();
-		// contentWayPoint();
+		contentWayPoint();
 		dropdown();
 		testimonialCarousel();
 		goToTop();

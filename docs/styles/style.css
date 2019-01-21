@@ -1432,6 +1432,9 @@ form label {
   z-index: 9999;
   background: url(../images/loader.gif) center no-repeat #fff; }
 
+.js .animate-box {
+  opacity: 0; }
+
 .wearetext {
   font-family: "Amatic SC", cursive;
   color: #fff;
