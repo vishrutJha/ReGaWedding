@@ -1386,6 +1386,16 @@ form label {
   .btn-outline:hover, .btn-outline:focus, .btn-outline:active {
     box-shadow: none; }
 
+.btn-circle {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  padding: 10px 0px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.42857; }
+
 .btn.with-arrow {
   position: relative;
   transition: 0.3s; }
