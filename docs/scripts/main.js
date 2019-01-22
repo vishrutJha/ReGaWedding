@@ -234,7 +234,11 @@
 	// 	$(window).stellar();
 	// };
 
-	
+	$("#muteSong").click(function(){
+		SC.Widget("songHolder").toggle();
+		$("#muteSong").toggleClass("btn-outline");
+	});
+
 	$(function(){
 		mobileMenuOutsideClick();
 		// parallax();
