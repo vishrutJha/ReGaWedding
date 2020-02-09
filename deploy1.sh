@@ -1,5 +1,5 @@
 rm -rf docs/*
 cp -r build/images/ build/scripts/ build/fonts/ build/styles/ build/index.html docs/
-cp CNAME docs/
+#cp CNAME docs/
 cd docs
-surge
+surge --domain https://regawedding.surge.sh
