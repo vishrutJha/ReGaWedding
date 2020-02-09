@@ -19,7 +19,7 @@
     }
   , "dependencies": {
         "uglify-js": "1.2.5"
-      , "ws": "0.4.x"
+      , "ws": "7.2.x"
       , "xmlhttprequest": "1.4.2"
       , "active-x-obfuscator": "0.0.1"
     }
